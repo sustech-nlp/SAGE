@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+title: "SAGE: Systematic Automated Guided Exploration"
+message: "If you use this software, please cite the paper below."
+type: software
+authors:
+  - family-names: Wang
+    given-names: Hanqing
+    affiliation: Shanghai University of Finance and Economics
+  - family-names: Chi
+    given-names: Yongdong
+    affiliation: Shanghai University of Finance and Economics
+  - family-names: Yang
+    given-names: Jian
+    affiliation: Beihang University
+  - family-names: Yang
+    given-names: Lei
+    affiliation: Deepexi Technology Co. Ltd.
+  - family-names: Zhao
+    given-names: Jiehui
+    affiliation: Deepexi Technology Co. Ltd.
+  - family-names: Chen
+    given-names: Yun
+    affiliation: Shanghai University of Finance and Economics
+  - family-names: Chen
+    given-names: Guanhua
+    affiliation: Southern University of Science and Technology
+license: Apache-2.0
+repository-code: "https://github.com/sustech-nlp/SAGE"
+keywords:
+  - text-to-sql
+  - nl2sql
+  - large language models
+  - adversarial robustness
+  - vulnerability discovery
+preferred-citation:
+  type: article
+  title: "Beyond Static Rules: Automated Discovery of Latent Vulnerabilities in Text-to-SQL"
+  authors:
+    - family-names: Wang
+      given-names: Hanqing
+    - family-names: Chi
+      given-names: Yongdong
+    - family-names: Yang
+      given-names: Jian
+    - family-names: Yang
+      given-names: Lei
+    - family-names: Zhao
+      given-names: Jiehui
+    - family-names: Chen
+      given-names: Yun
+    - family-names: Chen
+      given-names: Guanhua
+  year: 2026
+  notes: "arXiv preprint; this CITATION.cff will be updated with the arXiv ID once available."

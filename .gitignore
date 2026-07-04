@@ -1,0 +1,137 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+sdist/
+wheels/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+.installed.cfg
+MANIFEST
+
+# ============================================================
+# Testing / type-checking
+# ============================================================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# ============================================================
+# Jupyter / IPython
+# ============================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+
+# ============================================================
+# Python virtual environments
+# ============================================================
+.env
+.venv
+env/
+venv/
+ENV/
+.python-version
+
+# ============================================================
+# IDE / editor
+# ============================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.cadence/
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+Thumbs.db
+.nfs*
+
+# ============================================================
+# SAGE — Data (downloaded / preprocessed; rebuilt by scripts)
+# ============================================================
+data/raw/
+data/processed/
+data/database/
+data/csv_database/
+data/finetune/*.json
+data/finetune/*.jsonl
+!data/finetune/.gitkeep
+
+# ============================================================
+# SAGE — Models (symlinked / downloaded; never tracked).
+# Anchored at the repo root so `configs/models/` (which holds the
+# per-model YAML stubs) is not affected.
+# ============================================================
+/models/
+
+# ============================================================
+# SAGE — Training & run artifacts
+# ============================================================
+outputs/
+checkpoints/
+wandb/
+runs/
+logs/
+*.log
+*.out
+nohup.out
+server_log_*.txt
+
+# ============================================================
+# SAGE — Caches
+# ============================================================
+cache/
+.cache/
+
+# ============================================================
+# Documentation build / diff archive
+# ============================================================
+docs/_build/
+docs/_diffs/*.patch
+!docs/_diffs/.gitkeep
+
+# ============================================================
+# Plots — only commit files explicitly under docs/figures/
+# ============================================================
+*.png
+*.pdf
+*.svg
+!docs/figures/**/*.png
+!docs/figures/**/*.pdf
+!docs/figures/**/*.svg
+
+# ============================================================
+# Private maintainer notes (never published)
+# ============================================================
+*.local.md
+
+# ============================================================
+# Paper draft / submission exports (never published in this repo)
+# ============================================================
+/acl26_advsql_whq__arxiv_ (1)/

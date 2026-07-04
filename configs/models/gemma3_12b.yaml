@@ -1,0 +1,15 @@
+# Gemma-3-12B-it — one of SAGE's three Target models (paper Table 1).
+
+model:
+  name: gemma-3-12b-it
+  hf_repo: google/gemma-3-12b-it
+  local_path: models/gemma-3-12b-it
+
+serving:
+  port: 1126
+  cuda_devices: "6,7"
+  gpu_memory_utilization: 0.9
+  served_model_name: localModel
+
+# Gemma uses each model's default chat sampling (paper Section 4.1).
+sampling: {}

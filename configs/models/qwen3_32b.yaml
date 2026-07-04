@@ -1,0 +1,22 @@
+# Qwen3-32B — used by SAGE as Generator / Checker / Summarizer
+# (paper Section 4.1; ~64GB in bf16, fits two A100-80GB with TP=2).
+
+model:
+  name: Qwen3-32B
+  hf_repo: Qwen/Qwen3-32B
+  # Directory expected under $SAGE_MODELS_DIR/Qwen3-32B/ after running
+  # scripts/01_prepare.sh <model_pack>, or downloaded via
+  #   huggingface-cli download Qwen/Qwen3-32B --local-dir models/Qwen3-32B
+  local_path: models/Qwen3-32B
+
+serving:
+  port: 1125
+  cuda_devices: "1,5"           # paper setup; override via 02_serve.sh
+  gpu_memory_utilization: 0.9
+  served_model_name: localModel
+
+sampling:
+  # Paper Section 4.1: Qwen3-32B sampling kwargs.
+  temperature: 0.6
+  top_k: 20
+  top_p: 0.95

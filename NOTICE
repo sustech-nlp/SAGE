@@ -1,0 +1,54 @@
+SAGE: Systematic Automated Guided Exploration
+Copyright 2026 The SAGE Authors
+  Hanqing Wang, Yongdong Chi, Jian Yang, Lei Yang, Jiehui Zhao,
+  Yun Chen, Guanhua Chen
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this software except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+================================================================
+Third-party software and resources
+================================================================
+
+This product depends on or references the following third-party
+components, each governed by their own license. Inclusion below
+does not imply endorsement by their respective authors.
+
+1. Spider benchmark
+   https://yale-lily.github.io/spider
+   License: CC BY-SA 4.0 (dataset)
+   Yu, T., et al. 2018. "Spider: A Large-Scale Human-Labeled Dataset
+   for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task."
+   In Proceedings of EMNLP 2018.
+
+2. BIRD benchmark
+   https://bird-bench.github.io/
+   License: CC BY-SA 4.0 (dataset)
+   Li, J., et al. 2023. "BIRD: A Big Bench for Large-Scale Database
+   Grounded Text-to-SQL Evaluation." NeurIPS 2023.
+
+3. Initial Vulnerability Codex seed patterns derive from prior work
+   on text-to-SQL robustness benchmarks:
+   - Dr.Spider: Chang, S., et al. 2023. ICLR 2023.
+   - SpiderSyn: Gan, Y., et al. 2021. ACL 2021.
+   - ADVETA:   Pi, X., et al. 2022. ACL 2022.
+
+4. Base language models used as Generator / Checker / Summarizer /
+   Embedding / Target backbones (downloaded separately by users):
+   - Qwen3-32B, Qwen3-Embedding-4B
+     (Yang, A., et al. 2025. "Qwen3 technical report.")
+     https://huggingface.co/Qwen — Apache License 2.0
+   - Gemma-3-12B-it
+     (Gemma Team 2025. "Gemma 3 technical report.")
+     https://huggingface.co/google/gemma-3-12b-it — Gemma Terms of Use
+   - OmniSQL-32B
+     (Li, H., et al. 2025. "OmniSQL: Synthesizing high-quality
+     text-to-SQL data at scale.")
+   - inf-rl-qwen-coder-32b-2746
+     https://huggingface.co/infly/inf-rl-qwen-coder-32b-2746
+
+Refer to each component's own LICENSE / model card for the precise
+terms before redistribution or commercial use.

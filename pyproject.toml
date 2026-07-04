@@ -1,0 +1,119 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sage-text2sql"
+version = "0.1.0"
+description = "SAGE: Systematic Automated Guided Exploration for text-to-SQL vulnerability discovery"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Hanqing Wang" },
+    { name = "Yongdong Chi" },
+    { name = "Jian Yang" },
+    { name = "Lei Yang" },
+    { name = "Jiehui Zhao" },
+    { name = "Yun Chen" },
+    { name = "Guanhua Chen" },
+]
+keywords = [
+    "text-to-sql",
+    "nl2sql",
+    "llm",
+    "adversarial-robustness",
+    "vulnerability-discovery",
+    "spider",
+    "bird",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Pinned to the versions in the authors' reproduction environment
+# (see environment.yml). These are the versions the paper's experiments
+# were run with.
+dependencies = [
+    # Deep learning
+    "torch==2.7.0",
+    "torchvision==0.22.0",
+    "torchaudio==2.7.0",
+    "transformers==4.51.3",
+    "tokenizers==0.21.1",
+    "peft==0.15.2",
+    "accelerate==1.7.0",
+
+    # Serving / inference
+    "vllm==0.9.2",
+    "xformers==0.0.30",
+    "liger-kernel==0.6.2",
+    "triton==3.3.0",
+
+    # Distributed training
+    "deepspeed==0.15.0",
+
+    # Vector index + embeddings
+    "faiss-cpu==1.9.0.post1",
+    "sentence-transformers==3.3.1",
+
+    # LLM API client
+    "openai==1.68.2",
+    "huggingface-hub==0.34.4",
+
+    # Data / SQL
+    "pandas==2.2.3",
+    "sqlglot==26.0.0",
+    "func-timeout==4.3.5",
+    "jsonlines==4.0.0",
+    "numpy==1.26.4",
+
+    # Misc
+    "pyyaml==6.0.2",
+    "tqdm==4.66.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.5",
+    "black>=24.0",
+]
+# Mirror the heavier pieces of the authors' env that aren't strictly
+# required for the core pipeline but are useful for analysis / demos.
+extra = [
+    "gradio==5.31.0",
+    "wandb==0.19.0",
+    "matplotlib==3.10.5",
+    "jupyterlab==4.3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/sustech-nlp/SAGE"
+Repository = "https://github.com/sustech-nlp/SAGE"
+Paper = "https://github.com/sustech-nlp/SAGE"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sage*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]

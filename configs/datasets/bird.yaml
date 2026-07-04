@@ -1,0 +1,27 @@
+# BIRD dataset configuration.
+
+dataset: bird
+splits:
+  dev:
+    db_type: bird_dev
+    questions_file: dev_20240627/dev.json
+    tables_file: dev_20240627/dev_tables.json
+    sqlite_dir: dev_20240627/dev_databases
+    normalized_output: data/processed/bird_dev.json
+    has_evidence: true
+    has_precomputed_difficulty: true
+  train:
+    db_type: bird_train
+    questions_file: train/train.json
+    tables_file: train/train_tables.json
+    sqlite_dir: train/train_databases
+    normalized_output: data/processed/bird_train.json
+    has_evidence: true
+    has_precomputed_difficulty: false  # computed via Spider hardness evaluator
+
+# Public download URLs (https://bird-bench.github.io/ — accept the license terms
+# before downloading). scripts/01_prepare.sh has the actual wget calls.
+source:
+  homepage: https://bird-bench.github.io/
+  license: CC BY-SA 4.0
+  citation: 'Li et al., "BIRD: A Big Bench for Large-Scale Database Grounded Text-to-SQL Evaluation", NeurIPS 2023.'

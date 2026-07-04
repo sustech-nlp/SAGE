@@ -1,0 +1,49 @@
+# Spider 1.0 dataset configuration.
+
+dataset: spider
+splits:
+  dev:
+    db_type: spider_dev
+    questions_file: dev.json
+    tables_file: tables.json
+    sqlite_dir: database
+    normalized_output: data/processed/spider_dev.json
+    has_evidence: false
+    has_precomputed_difficulty: false
+  train:
+    db_type: spider_dev
+    questions_file: train.json
+    tables_file: tables.json
+    sqlite_dir: database
+    normalized_output: data/processed/spider_train.json
+    has_evidence: false
+    has_precomputed_difficulty: false
+  realistic:
+    db_type: spider_dev
+    questions_file: spider-realistic.json
+    tables_file: tables.json
+    sqlite_dir: database
+    normalized_output: data/processed/spider_realistic.json
+    has_evidence: false
+    has_precomputed_difficulty: false
+  test:
+    db_type: spider_test
+    questions_file: test.json
+    tables_file: test_tables.json
+    sqlite_dir: test_database
+    normalized_output: data/processed/spider_test.json
+    has_evidence: false
+    has_precomputed_difficulty: false
+  dk:
+    db_type: spider_dev
+    questions_file: Spider-DK/Spider-DK.json
+    tables_file: Spider-DK/tables.json
+    sqlite_dir: Spider-DK/database
+    normalized_output: data/processed/spider_dk.json
+    has_evidence: false
+    has_precomputed_difficulty: false
+
+source:
+  homepage: https://yale-lily.github.io/spider
+  license: CC BY-SA 4.0
+  citation: 'Yu et al., "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task", EMNLP 2018.'

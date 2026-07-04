@@ -1,0 +1,64 @@
+# SAGE default configuration.
+#
+# Every field is optional — at runtime, environment variables override values
+# here, and explicit CLI flags override env vars. This file documents the
+# available knobs.
+
+# ----------------------------------------------------------------------
+# Filesystem layout (matches sage.config.Paths defaults)
+# ----------------------------------------------------------------------
+paths:
+  # All paths are resolved relative to SAGE_ROOT (default: cwd) unless
+  # absolute. Override via env vars: SAGE_ROOT, SAGE_DATA_DIR,
+  # SAGE_MODELS_DIR, SAGE_OUTPUTS_DIR, SAGE_CACHE_DIR, SAGE_DATABASE_DIR,
+  # SAGE_CSV_DATABASE_DIR.
+  data_dir: data
+  models_dir: models
+  outputs_dir: outputs
+  cache_dir: outputs/cache
+  database_dir: data/database
+  csv_database_dir: data/csv_database
+
+# ----------------------------------------------------------------------
+# LLM servers — set base_url for each role. The paper uses three local
+# vLLM-served instances; scripts/02_serve.sh starts them.
+# ----------------------------------------------------------------------
+servers:
+  attacker:
+    base_url: http://127.0.0.1:1125/v1
+    model: Qwen3-32B
+    api_key: localModel
+  target:
+    base_url: http://127.0.0.1:1126/v1
+    model: gemma-3-12b-it
+    api_key: localModel
+  judger:
+    # Reuses the attacker server in the paper setup.
+    base_url: http://127.0.0.1:1125/v1
+    model: Qwen3-32B
+    api_key: localModel
+  embedding:
+    base_url: http://127.0.0.1:1127/v1
+    model: Qwen3-Embedding-4B
+    api_key: localModel
+
+# ----------------------------------------------------------------------
+# Generator/Checker/Summarizer sampling — paper Section 4.1 defaults.
+# ----------------------------------------------------------------------
+sampling:
+  temperature: 0.6
+  top_k: 20
+  top_p: 0.95
+
+# ----------------------------------------------------------------------
+# SAGE workflow hyperparameters — paper Section 3 / 4.1.
+# ----------------------------------------------------------------------
+workflow:
+  iterations: 3                  # T in the paper
+  hypotheses_per_sample: 3       # K in the paper
+  experience_top_k: 5            # Top-N retrieval from Vulnerability Codex
+  compression_threshold: 0.1     # τ for semantic compression
+  scopes:
+    - query
+    - relevant_schema
+    - irrelevant_schema

@@ -1,0 +1,18 @@
+# Qwen3-Embedding-4B — embeddings for FAISS-based Vulnerability Codex
+# semantic compression (paper Section 4.1).
+
+model:
+  name: Qwen3-Embedding-4B
+  hf_repo: Qwen/Qwen3-Embedding-4B
+  local_path: models/Qwen3-Embedding-4B
+
+serving:
+  port: 1127
+  cuda_devices: "4"
+  gpu_memory_utilization: 0.5
+  served_model_name: localModel
+  # vLLM serves embedding models via --task embed when --served-model-name is
+  # also given. The launcher in scripts/02_serve.sh handles this.
+  task: embed
+
+sampling: {}
