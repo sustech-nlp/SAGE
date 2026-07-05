@@ -2,6 +2,10 @@
 
 **Systematic Automated Guided Exploration** &mdash; autonomously discover latent vulnerabilities in LLM-based text-to-SQL generation.
 
+## News
+
+- **2026.04**: *Beyond Static Rules: Automated Discovery of Latent Vulnerabilities in Text-to-SQL* was accepted to **Findings of ACL 2026**.
+
 Given a target text-to-SQL model and a benchmark (BIRD or Spider), SAGE iteratively finds inputs where the model fails despite being able to solve the original sample, and distills each successful attack into an evolving **Vulnerability Codex** that guides later rounds.
 
 **On BIRD and Spider, SAGE drives target accuracy far below expert-crafted static rules** — e.g. it takes Gemma-3's BIRD execution accuracy from 53.7% (unprobed) to 8.3%, versus 24.6% for manual rules.
@@ -84,15 +88,21 @@ pytest tests/smoke/ -v        # unit tests, no GPU/server required
 ## Citation
 
 ```bibtex
-@article{sage2026,
-  title   = {Beyond Static Rules: Automated Discovery of Latent Vulnerabilities in Text-to-SQL},
-  author  = {Hanqing Wang and Yongdong Chi and Jian Yang and Lei Yang and Jiehui Zhao and Yun Chen and Guanhua Chen},
-  journal = {arXiv preprint},
-  year    = {2026}
+@inproceedings{wang-etal-2026-beyond,
+  title     = {Beyond Static Rules: Automated Discovery of Latent Vulnerabilities in Text-to-{SQL}},
+  author    = {Wang, Hanqing and Chi, Yongdong and Yang, Jian and Yang, Lei and Zhao, Jiehui and Chen, Yun and Chen, Guanhua},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  month     = jul,
+  year      = {2026},
+  address   = {San Diego, California, United States},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2026.findings-acl.842/},
+  doi       = {10.18653/v1/2026.findings-acl.842},
+  pages     = {17065--17082}
 }
 ```
 
-See [`CITATION.cff`](CITATION.cff) for the structured form. The arXiv link will be added here once available.
+See [`CITATION.cff`](CITATION.cff) for the structured form.
 
 ---
 

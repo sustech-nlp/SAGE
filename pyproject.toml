@@ -97,7 +97,7 @@ extra = [
 [project.urls]
 Homepage = "https://github.com/sustech-nlp/SAGE"
 Repository = "https://github.com/sustech-nlp/SAGE"
-Paper = "https://github.com/sustech-nlp/SAGE"
+Paper = "https://aclanthology.org/2026.findings-acl.842/"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

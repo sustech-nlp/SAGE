@@ -26,6 +26,7 @@ authors:
     affiliation: Southern University of Science and Technology
 license: Apache-2.0
 repository-code: "https://github.com/sustech-nlp/SAGE"
+url: "https://aclanthology.org/2026.findings-acl.842/"
 keywords:
   - text-to-sql
   - nl2sql
@@ -33,7 +34,7 @@ keywords:
   - adversarial robustness
   - vulnerability discovery
 preferred-citation:
-  type: article
+  type: conference-paper
   title: "Beyond Static Rules: Automated Discovery of Latent Vulnerabilities in Text-to-SQL"
   authors:
     - family-names: Wang
@@ -51,4 +52,14 @@ preferred-citation:
     - family-names: Chen
       given-names: Guanhua
   year: 2026
-  notes: "arXiv preprint; this CITATION.cff will be updated with the arXiv ID once available."
+  month: 7
+  collection-title: "Findings of the Association for Computational Linguistics: ACL 2026"
+  publisher:
+    name: "Association for Computational Linguistics"
+  conference:
+    name: "ACL 2026"
+    location: "San Diego, California, United States"
+  doi: "10.18653/v1/2026.findings-acl.842"
+  url: "https://aclanthology.org/2026.findings-acl.842/"
+  start: 17065
+  end: 17082
